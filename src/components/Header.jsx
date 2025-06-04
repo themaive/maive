@@ -6,7 +6,7 @@ function Header() {
 
     const links = [
         {id:0, title: "home", route:'/'},
-        {id:1, title: "services", route:'/'},
+        {id:1, title: "services", route:'/#our-services'},
         {id:2, title: "products", route:'/'},
         {id:3, title: "our work", route:'/'},
         {id:4, title: "how it works", route:'/'},

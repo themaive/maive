@@ -7,6 +7,7 @@ import WhyCard from '../components/WhyCard'
 import ServiceCard from '../components/ServiceCard'
 import DividerWithBackground from '../components/DividerWithBackground'
 import Footer from '../components/Footer';
+import founderProfile from '../assets/founder.jpg';
 
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
@@ -81,7 +82,7 @@ function WhyChooseUs() {
 }
 
 function OurServices() {
-  return <section className='mx-auto container w-full py-10 h-screen'>
+  return <section className='mx-auto container w-full py-10 h-screen' id='our-services'>
     <div className="flex justify-center items-center flex-col">
       <HeadingWithBottomBorder heading={"our services"}></HeadingWithBottomBorder>
       <h4 className="my-5 font-medium text-black text-2xl">Delivering powerful, custom-built software solutions across platforms.</h4>
@@ -103,15 +104,45 @@ function OurServices() {
 
 function OurWork () {
   return (
-    <section className='w-screen h-screen bg-white py-10'>
+    <section className='w-screen h-screen bg-white py-10' id='our-work'>
       <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
     </section>
   )
 }
 function AboutTheFounder () {
   return (
-    <section className='w-screen h-screen py-10'>
-      <HeadingWithBottomBorder heading={'about the founder'}></HeadingWithBottomBorder>
+    <section className='container flex justify-between items-center flex-col mx-auto h-screen py-10' id='about-the-founder'>
+      <div className='flex justify-center items-center flex-col'>
+        <HeadingWithBottomBorder heading={'about the founder'}></HeadingWithBottomBorder>
+      <h2 className="text-2xl font-normal mt-10 text-black">Hi, I'm <span className='font-semibold'>Madhan</span> - the developer behind the code.</h2>
+      </div>
+
+      <main className='w-full relative h-6/12 flex justify-center items-center '>
+        <div className="absolute top-0 left-20 w-60 h-auto bg-gray-300 overflow-hidden border-2 border-violet-600" style={{borderTopLeftRadius:'25%', borderBottomRightRadius:"25%"}}>
+          <img src={founderProfile} alt="" className="w-full h-full object-scale-up" />
+        </div>
+        <div className="flex justify-center h-full w-full max-w-9/12 max-h-10/12 bg-violet-700">
+          <div className="w-8/12 h-full flex-col flex justify-evenly items-end">
+              <p className='font-medium text-lg'>I’m a passionate software developer and the founder of this startup, where I specialize in delivering custom-built software solutions for both final-year students and corporate professionals. </p>
+
+            <p className='font-medium text-lg'>From mobile and web apps to backend servers and desktop applications, I personally handle each project — turning ideas into reliable, user-friendly software. </p>
+
+            <p className='font-medium text-lg'> What started as a personal interest in programming has grown into a mission: to make high-quality, purpose-driven software accessible to students and individuals alike.</p>
+          </div>
+        </div>
+      </main>
+
+     <ul className='w-fit h-auto'>
+      <li className='w-full p-5 flex justify-start border-2 border-gray-100 items-center my-2'>
+        <i className="fas fa-lightbulb text-amber-300"></i>
+        <h4 className='font-medium text-lg text-gray-700'><span className='mx-2 font-semibold'>Vision:</span> Empower individuals and students by bringing their software ideas to life — with passion, precision, and commitment.</h4>
+      </li>
+        <li className='w-full p-5 flex justify-start border-2 border-gray-100 items-center my-2'>
+        <i className="fas fa-cog text-gray-900"></i>
+        <h4 className='font-medium text-lg text-gray-700'><span className='mx-2 font-semibold'>Tech Stack:</span>Java, Spring Boot, Node.js, ReactJS, MySQL, MongoDB, HTML, CSS, JavaScript, Swing, and more.</h4>
+      </li>
+     </ul>
+
     </section>
   )
 }
@@ -147,7 +178,7 @@ function Testimonials () {
 }
 function HowItWorks () {
   return (
-    <section className='w-screen h-screen bg-white py-10'>
+    <section className='w-screen h-screen bg-white py-10' id='how-it-works'>
       <HeadingWithBottomBorder heading={'how it works'}></HeadingWithBottomBorder>
     </section>
   )
