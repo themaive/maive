@@ -5,6 +5,7 @@ import ButtonWithText from '../components/ButtonWithText'
 import HeadingWithBottomBorder from '../components/HeadingWithBottomBorder'
 import WhyCard from '../components/WhyCard'
 
+import data from '../services/why_choose_us.json';
 
 function HomePage() {
   return (
@@ -51,12 +52,11 @@ function WhyChooseUs () {
     <HeadingWithBottomBorder heading={'why choose us?'}></HeadingWithBottomBorder>
 
     <section className="container mx-auto flex justify-around items-center flex-wrap">
-      <WhyCard></WhyCard>
-      <WhyCard></WhyCard>
-      <WhyCard></WhyCard>
-      <WhyCard></WhyCard>
-      <WhyCard></WhyCard>
-      <WhyCard></WhyCard>
+      {
+        data.map((item)=> (
+          <WhyCard key={item.id} item={item} isLast={item.id == data.length - 1}/>
+        ))
+      }
     </section>
 
   </section>
