@@ -6,6 +6,7 @@ import HeadingWithBottomBorder from '../components/HeadingWithBottomBorder'
 import WhyCard from '../components/WhyCard'
 import ServiceCard from '../components/ServiceCard'
 import DividerWithBackground from '../components/DividerWithBackground'
+import Footer from '../components/Footer';
 
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
@@ -26,6 +27,8 @@ function HomePage() {
       <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
       <OurServices></OurServices>
+      <DividerWithBackground/>
+      <Footer></Footer>
     </div>
   )
 }
