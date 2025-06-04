@@ -1,0 +1,35 @@
+import React, { useState } from 'react'
+import ButtonWithText from './ButtonWithText'
+import listImage from '../assets/tick.png';
+
+function ServiceCard({service}) {
+
+  return (
+    <div className='w-90 bg-white h-100 p-4 py-2 flex justify-between align-center flex-col border-2 border-violet-400 rounded-2xl cursor-default hover:bg-violet-600 transition-colors text-black hover:text-white'>
+      <h2 className="my-2 text-2xl font-semibold text-auto capitalize w-80 ">{service.service}</h2>
+      <p className="w-80 font-normal">{service.description}</p>
+
+      <ul className='w-full py-2'>
+        {/* <li className='flex justify-start items-start w-full text-sm'>
+          <img src={listImage} alt="" className="w-5 me-2" />
+          Frontend with HTML, CSS, JavaScript, React, etc.
+        </li> */}
+       {service.services.map((item) => (
+         <li key={item.id} className='my-2 flex justify-start items-start w-full text-sm'>
+          <img src={listImage} alt="" className="w-5 me-2" />
+          {item.title}
+        </li>
+       ))}
+
+        
+
+      </ul>
+
+        <div className="self-center text-white">
+          <ButtonWithText title={"get started now"}></ButtonWithText>
+        </div>
+    </div>
+  )
+}
+
+export default ServiceCard

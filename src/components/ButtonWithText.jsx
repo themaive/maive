@@ -2,9 +2,9 @@ import React from 'react'
 
 function ButtonWithText({title, icon}) {
   return (
-    <a href="#" className='flex justify-center items-center w-fit px-20 py-4 rounded-full bg-black text-lg hover:text-black hover:bg-white transition-colors'>
-        <span className='mx-2'>{title}</span>
-        <i className={`fas fa-${icon}`}></i>
+    <a href="#" className='flex justify-center items-center border-2 border-black hover:border-2 hover:border-violet-500 w-max px-10 py-4 rounded-full bg-black text-lg hover:text-black hover:bg-white transition-colors'>
+        <span className='mx-2 capitalize'>{title}</span>
+        {icon && <i className={`fas fa-${icon}`}></i>}
     </a>
   )
 }
