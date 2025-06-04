@@ -28,6 +28,16 @@ function HomePage() {
       <DividerWithBackground />
       <OurServices></OurServices>
       <DividerWithBackground/>
+      <OurWork></OurWork>
+      <DividerWithBackground/>
+      <AboutTheFounder></AboutTheFounder>
+      <DividerWithBackground/>
+      <Testimonials></Testimonials>
+      <DividerWithBackground/>
+      <HowItWorks></HowItWorks>
+      <DividerWithBackground/>
+      <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
+      <DividerWithBackground/>
       <Footer></Footer>
     </div>
   )
@@ -37,7 +47,7 @@ function Banner() {
   return (
     <main className='container m-auto bg-transparent w-screen h-screen flex flex-col justify-center items-center p-4 pt-20'>
       <h2 className="text-7xl font-semibold text-black text-center leading-20">Empowering Innovation <br />
-        <span className='text-white' >with&nbsp;</span>
+        <span className='text-white py-5' >with&nbsp;</span>
         Intelligent Tech
       </h2>
       <h4 className='w-2/4 text-2xl text-center mt-10'>
@@ -89,6 +99,66 @@ function OurServices() {
       <ButtonWithText title={'Request a custom service'} icon={''}></ButtonWithText>
     </div>
   </section>
+}
+
+function OurWork () {
+  return (
+    <section className='w-screen h-screen bg-white py-10'>
+      <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
+    </section>
+  )
+}
+function AboutTheFounder () {
+  return (
+    <section className='w-screen h-screen py-10'>
+      <HeadingWithBottomBorder heading={'about the founder'}></HeadingWithBottomBorder>
+    </section>
+  )
+}
+function Testimonials () {
+  return (
+    <section className='container flex justify-between items-center flex-col mx-auto h-screen py-10'>
+      <div className='flex justify-center items-center flex-col'>
+        <HeadingWithBottomBorder heading={'client testimonials'}></HeadingWithBottomBorder>
+      <h2 className="text-2xl font-semibold mt-10 text-black">What our happy clients say</h2>
+      </div>
+
+      <main className='w-full h-2/12 flex justify-center items-center flex-col'>
+       {/* <div className="flex justify-center items-center"> */}
+         <i className="text-7xl text-violet-600 fas fa-quote-left m-10 self-start"></i>
+        <h1 className='text-black text-center text-3xl font-normal text-wrap w-10/12'>The software <span className='font-semibold'>Maive</span> built exceeded my expectations. Everything was explained clearly and delivered on time. </h1>
+        <i className="text-7xl text-violet-600 fas fa-quote-right m-10 self-end"></i>
+       {/* </div> */}
+
+
+      </main>
+        <div className="flex items-center justify-center text-black self-end">
+          <span className='text-4xl font-bold'>-</span>
+          <h4 className="text-xl text-end font-semibold w-full"> Dhanush M. MBA, Student.</h4>
+        </div>
+
+      <h5 className='font-medium text-black text-lg'>
+        Want to be our next happy client?&nbsp;
+        <a href="#" className='text-violet-700 hover:text-violet-500 transition-colors'>Let's build something great together.</a>
+      </h5>
+
+    </section>
+  )
+}
+function HowItWorks () {
+  return (
+    <section className='w-screen h-screen bg-white py-10'>
+      <HeadingWithBottomBorder heading={'how it works'}></HeadingWithBottomBorder>
+    </section>
+  )
+}
+
+function FrequentlyAskedQuestions () {
+  return (
+    <section className='w-screen h-screen bg-white py-10'>
+      <HeadingWithBottomBorder heading={'frequently asked questions'}></HeadingWithBottomBorder>
+    </section>
+  )
 }
 
 export default HomePage
