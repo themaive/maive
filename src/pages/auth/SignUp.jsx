@@ -18,7 +18,7 @@ function SignUp() {
       <AuthHeader></AuthHeader>
 
       <main className={`mt-5 p-2 w-full h-full mx-auto my-auto flex justify-between items-start ${styles.main}`}>
-        <BackButton></BackButton>
+        <BackButton to={'/'}></BackButton>
         <form action="" className='w-10/12 h-full ms-4'>
         <FormHeading title={'It’s great to have you here!'}></FormHeading>
         <h5 className="text-lg text-gray-700 mt-5">

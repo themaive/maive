@@ -18,7 +18,7 @@ function SignIn() {
       <AuthHeader signIn={true}></AuthHeader>
 
       <main className={`mt-5 p-2 w-full h-full mx-auto my-auto flex justify-between items-start ${styles.main}`}>
-        <BackButton></BackButton>
+        <BackButton to={'/auth/sign-up'}></BackButton>
         <form action="" className='w-10/12 h-full ms-4'>
         <FormHeading title={'Good to have you back'}></FormHeading>
         <h5 className="text-lg text-gray-700 mt-5">

@@ -7,7 +7,7 @@ import InputField from '../../components/InputField'
 import PrimaryButton from '../../components/PrimaryButton'
 import { useNavigate } from 'react-router-dom'
 
-function ForgotPassword() {
+function ResetCode() {
 
   const navigate = useNavigate();
 
@@ -20,16 +20,13 @@ const styles = {
       <AuthHeader></AuthHeader>
 
       <main className={`mt-5 p-2 w-full h-full mx-auto my-auto flex justify-between items-start ${styles.main}`}>
-        <BackButton to={'/auth/sign-in'}></BackButton>
+        <BackButton to={'/auth/forgot-password'}></BackButton>
         <form action="" className='w-10/12 h-full ms-4'>
-        <FormHeading title={'Forgot password?'}></FormHeading>
-        <h5 className="text-lg text-gray-700 mt-5">
-         Don’t worry about losing your password — we’ve got your back.
-        </h5>
+        <FormHeading title={'Enter the code that we\'ve sent to your email'}></FormHeading>
         <VSpacer height={2}></VSpacer>
-        <InputField hint={'Your email'} type={'email'}></InputField>
+        <InputField hint={'Enter code'} type={'email'}></InputField>
         <VSpacer height={2}></VSpacer>
-        <PrimaryButton title={'Send reset code'} onClick={()=>{
+        <PrimaryButton title={'Continue'} onClick={()=>{
           navigate('/auth/reset-code');
         }}></PrimaryButton>
         <VSpacer height={2} />
@@ -40,4 +37,4 @@ const styles = {
   )
 }
 
-export default ForgotPassword
+export default ResetCode
