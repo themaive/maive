@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import one from '../assets/images/work/1.png';
 import two from '../assets/images/work/2.png';
 import three from '../assets/images/work/3.png';
@@ -31,6 +31,12 @@ function ImageCarousel() {
         }
     }
 
+    useEffect(()=>{
+        setTimeout(()=>{
+            handleNext();
+        }, 3000);
+    }, [selectedImage]);
+
   return (
     <div className='w-full h-full flex flex-col' style={{
         backgroundImage:`url(${images[selectedImage].src})`,
@@ -38,19 +44,19 @@ function ImageCarousel() {
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center'
     }}>
-        <div className="flex justify-between items-center h-full">
+        {/* <div className="flex justify-between items-center h-full">
             <button onClick={handlePrev} className='hover:bg-violet-400 transition-colors p-4 bg-violet-500 text-white text-2xl cursor-default'>
                 <i className="fas fa-angle-left"></i>
             </button>
             <button onClick={handleNext} className='hover:bg-violet-400 transition-colors p-4 bg-violet-500 text-white text-2xl cursor-default'>
                 <i className="fas fa-angle-right"></i>
             </button>
-        </div>
+        </div> */}
 
-        <div className="flex justify-center items-center">
+        <div className="w-full h-full flex justify-center items-end">
             {
                 Array.from(images).map((item, index) => (
-                    <span className={`m-2 w-3 h-3 rotate-45 bg-violet-${selectedImage == index ? '600' : '300'} flex justify-center items=center text-black`} key={index}>
+                    <span className={`m-2 w-2 h-2 rotate-45 ${selectedImage == index ? 'bg-violet-600' : 'bg-violet-300'} flex justify-center items=center text-black`} key={index}>
 
                     </span>
                 ))

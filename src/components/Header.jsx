@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import brandLogo from '../assets/icon.png';
 import { Link } from 'react-router-dom';
-
+import BrandLogo from './BrandLogo';
 import barsIcon from '../assets/icons/bars.png';
 import closeIcon from '../assets/icons/close.png';
 
@@ -31,10 +31,7 @@ function Header() {
 
   return (
     <header className={`w-screen mb-10 py-5 ${toggled ? 'bg-white' : 'bg-transparent'} m-auto flex justify-center items-start flex-col ${styles.header}`}>
-        <div className="brand flex justify-start items-center">
-            <img src={brandLogo} alt="" className="w-15" />
-            <h1 className='text-2xl font-semibold text-black'>Maive</h1>
-        </div>
+        <BrandLogo></BrandLogo>
     
             <nav className={`${toggled ? 'block' : 'hidden'} w-screen relative px-4 backdrop:blur-2xl ${styles.nav}`} style={{backgroundColor:'#FFFFFF75'}}>
             <ul className='lg:flex'>
@@ -62,7 +59,7 @@ function Header() {
             }
         </button>
 
-        <a href="#" className={`${styles.getStarted} self-center ${toggled ? 'block' : 'hidden'} rounded-full transition-colors bg-transparent border-2 mt-5 hover:bg-violet-500 hover:text-white border-violet-600 text-black p-3 py-2 font-semibold`}>Get started</a>
+        <a href="/auth/sign-up" className={`${styles.getStarted} self-center ${toggled ? 'block' : 'hidden'} rounded-full transition-colors bg-transparent border-2 mt-5 hover:bg-violet-500 hover:text-white border-violet-600 text-black p-3 py-2 font-semibold`}>Get started</a>
     </header>
   )
 }

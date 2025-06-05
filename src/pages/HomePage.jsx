@@ -33,7 +33,7 @@ function HomePage() {
       <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
       <OurServices></OurServices>
-      {/* <DividerWithBackground/>
+      <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
       <AboutTheFounder></AboutTheFounder>
@@ -44,7 +44,7 @@ function HomePage() {
       <DividerWithBackground/>
       <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
       <DividerWithBackground/>
-      <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }
