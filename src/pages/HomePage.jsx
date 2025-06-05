@@ -29,9 +29,9 @@ function HomePage() {
       }}
       ></div>
 
-      {/* <DividerWithBackground />
-      <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
+      <WhyChooseUs></WhyChooseUs>
+      {/* <DividerWithBackground />
       <OurServices></OurServices>
       <DividerWithBackground/>
       <OurWork></OurWork>
@@ -58,7 +58,7 @@ function Banner() {
   }
 
   return (
-    <main className={`${styles.main} container m-auto bg-transparent w-screen h-10/12 flex flex-col justify-start items-center px-4`}>
+    <main className={`${styles.main} container m-auto bg-transparent w-screen min-h-10/12 h-auto flex flex-col justify-start items-center px-4`}>
       <h2 className={`text-3xl  font-semibold text-black text-center ${styles.heading}`}>Empowering Innovation <br />
         <span className='text-white py-5' >with&nbsp;</span>
         Intelligent Tech
@@ -79,10 +79,15 @@ function Banner() {
 }
 
 function WhyChooseUs() {
+
+  const styles = {
+    section: ''
+  }
+
   return <section className='cursor-default min-h-screen h-auto py-10 flex justify-around items-center flex-col'>
     <HeadingWithBottomBorder heading={'why choose us?'}></HeadingWithBottomBorder>
 
-    <section className="container mx-auto flex justify-around items-center flex-wrap">
+    <section className="container mx-auto flex justify-center items-center flex-wrap">
       {
         data.map((item) => (
           <WhyCard key={item.id} item={item} isLast={item.id == data.length - 1} />
