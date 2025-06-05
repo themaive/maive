@@ -11,6 +11,7 @@ import founderProfile from '../assets/founder.jpg';
 
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
+import FaqItem from '../components/FaqItem'
 
 function HomePage() {
   return (
@@ -67,7 +68,7 @@ function Banner() {
 }
 
 function WhyChooseUs() {
-  return <section className='cursor-default h-screen py-10 flex justify-around items-center flex-col'>
+  return <section className='cursor-default min-h-screen h-auto py-10 flex justify-around items-center flex-col'>
     <HeadingWithBottomBorder heading={'why choose us?'}></HeadingWithBottomBorder>
 
     <section className="container mx-auto flex justify-around items-center flex-wrap">
@@ -82,7 +83,7 @@ function WhyChooseUs() {
 }
 
 function OurServices() {
-  return <section className='mx-auto container w-full py-10 h-screen' id='our-services'>
+  return <section className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
     <div className="flex justify-center items-center flex-col">
       <HeadingWithBottomBorder heading={"our services"}></HeadingWithBottomBorder>
       <h4 className="my-5 font-medium text-black text-2xl">Delivering powerful, custom-built software solutions across platforms.</h4>
@@ -186,8 +187,21 @@ function HowItWorks () {
 
 function FrequentlyAskedQuestions () {
   return (
-    <section className='w-screen h-screen bg-white py-10'>
-      <HeadingWithBottomBorder heading={'frequently asked questions'}></HeadingWithBottomBorder>
+    <section className='container flex justify-start items-start flex-col mx-auto h-screen py-10'>
+      <div className='w-full flex justify-center items-center'>
+        <HeadingWithBottomBorder heading={'frequently asked questions'}></HeadingWithBottomBorder>
+      {/* <h2 className="text-2xl font-semibold mt-10 text-black">What our happy clients say</h2> */}
+      </div>
+
+      <ul className='w-full h-full'>
+        <li className='w-full h-auto border-2 border-gray-100 py-5 px-4 mt-4'>
+          <FaqItem></FaqItem>
+        </li>
+        <li className='w-full h-auto border-2 border-gray-100 py-5 px-4 mt-4'>
+          <FaqItem></FaqItem>
+        </li>
+      </ul>
+
     </section>
   )
 }
