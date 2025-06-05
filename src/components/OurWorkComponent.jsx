@@ -7,7 +7,7 @@ import PrimaryButton from './PrimaryButton';
 
 function OurWorkComponent() {
     return (
-        <div className='w-10/12 bg-red-100 h-7/12 flex justify-between items-center'>
+        <div className='w-10/12 border-2 border-violet-100 rounded-2xl overflow-hidden bg-violet-100 h-auto min-h-7/12 flex justify-between items-center'>
             <ImageCarousel></ImageCarousel>
             <div className="min-w-6/12 w-auto h-full p-5 bg-white text-black flex flex-col justify-around items-center">
                 <div className="my-2">
