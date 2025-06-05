@@ -4,6 +4,7 @@ import ImageCarousel from './ImageCarousel'
 import listImage from '../assets/icons/list-style.png';
 import ButtonWithText from './ButtonWithText';
 import PrimaryButton from './PrimaryButton';
+import VSpacer from './VSpacer';
 
 function OurWorkComponent() {
     return (
@@ -12,6 +13,7 @@ function OurWorkComponent() {
             <div className="min-w-6/12 w-auto h-full p-5 bg-white text-black flex flex-col justify-around items-center">
                 <div className="my-2">
                     <h2 className="text-2xl font-bold capitalize">Student course management system</h2>
+                    <VSpacer height={1}></VSpacer>
                     <h4 className="font-normal text-lg">
                         A desktop-based Java application designed for final-year students. It allows faculty to manage student details, attendance, grades, and reports efficiently.
                     </h4>

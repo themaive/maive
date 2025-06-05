@@ -1,5 +1,4 @@
 import React from 'react'
-import brandLogo from '../assets/icon.png';
 import BrandLogo from '../components/BrandLogo';
 import { Link } from 'react-router-dom';
 

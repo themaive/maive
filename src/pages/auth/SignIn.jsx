@@ -7,7 +7,7 @@ import VSpacer from '../../components/VSpacer';
 import PrimaryButton from '../../components/PrimaryButton';
 import { Link } from 'react-router-dom'
 
-function SignUp() {
+function SignIn() {
 
   const styles = {
     main: 'lg:w-120 lg:py-5'
@@ -41,4 +41,4 @@ function SignUp() {
   )
 }
 
-export default SignUp
+export default SignIn
