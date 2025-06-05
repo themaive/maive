@@ -31,9 +31,9 @@ function HomePage() {
 
       <DividerWithBackground />
       <WhyChooseUs></WhyChooseUs>
-      {/* <DividerWithBackground />
+      <DividerWithBackground />
       <OurServices></OurServices>
-      <DividerWithBackground/>
+      {/* <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
       <AboutTheFounder></AboutTheFounder>
@@ -102,7 +102,7 @@ function OurServices() {
   return <section className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
     <div className="flex justify-center items-center flex-col">
       <HeadingWithBottomBorder heading={"our services"}></HeadingWithBottomBorder>
-      <h4 className="my-5 font-medium text-black text-2xl">Delivering powerful, custom-built software solutions across platforms.</h4>
+      <h4 className="my-5 font-medium text-black text-2xl text-center w-80 lg:w-auto">Delivering powerful, custom-built software solutions across platforms.</h4>
     </div>
 
     <div className="flex justify-center items-center flex-wrap py-10">
