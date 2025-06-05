@@ -15,18 +15,21 @@ import FaqItem from '../components/FaqItem'
 import OurWorkComponent from '../components/OurWorkComponent'
 
 function HomePage() {
+
+  const styles = {
+    particle: 'sm:w-180 sm:h-180'
+  }
+
   return (
     <div className="w-screen h-screen bg-transparent">
       <Header />
       <Banner />
-      <div className="-z-40 bg-blue-400 absolute top-2/4 left-2/4 rounded-full blur-3xl" style={{
-        width: '50rem',
-        height: '50rem',
+      <div className={`-z-40 bg-blue-400 absolute top-2/4 left-2/4 w-full h-2/4 rounded-full blur-3xl ${styles.particle} `} style={{
         transform: 'translate(-50%, -50%)',
       }}
       ></div>
 
-      <DividerWithBackground />
+      {/* <DividerWithBackground />
       <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
       <OurServices></OurServices>
@@ -41,15 +44,20 @@ function HomePage() {
       <DividerWithBackground/>
       <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
       <DividerWithBackground/>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   )
 }
 
 function Banner() {
+
+  const styles = {
+    heading: 'sm:text-7xl sm:leading-20'
+  }
+
   return (
     <main className='container m-auto bg-transparent w-screen h-screen flex flex-col justify-center items-center p-4 pt-20'>
-      <h2 className="text-7xl font-semibold text-black text-center leading-20">Empowering Innovation <br />
+      <h2 className={`text-3xl  font-semibold text-black text-center ${styles.heading}`}>Empowering Innovation <br />
         <span className='text-white py-5' >with&nbsp;</span>
         Intelligent Tech
       </h2>
@@ -90,7 +98,7 @@ function OurServices() {
       <h4 className="my-5 font-medium text-black text-2xl">Delivering powerful, custom-built software solutions across platforms.</h4>
     </div>
 
-    <div className="flex justify-around items-center flex-wrap py-10">
+    <div className="flex justify-center items-center flex-wrap py-10">
       {
         services.map((item) => (
           <ServiceCard service={item} key={item.id} />

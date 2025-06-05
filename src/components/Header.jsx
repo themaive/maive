@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import brandLogo from '../assets/icon.png';
 import { Link } from 'react-router-dom';
 
+import barsIcon from '../assets/icons/bars.png';
+import closeIcon from '../assets/icons/close.png';
+
 function Header() {
+
+    const [toggled, settoggled] = useState(false);
 
     const links = [
         {id:0, title: "home", route:'/'},
@@ -13,17 +18,29 @@ function Header() {
         {id:5, title: "contact us", route:'/'}
     ];
 
+    const styles = {
+        header: 'lg:bg-transparent lg:justify-between lg:items-center lg:py-4 lg:flex-row lg:px-20 lg:m-0',
+        nav: 'lg:rounded-full lg:w-fit lg:visible lg:flex lg:p-4 lg:justify-center lg:items-center',
+        list: 'lg:text-sm lg:mt-0',
+        getStarted: 'lg:block'
+    }
+
+    const handleToggle = () => {
+        settoggled(toggled => !toggled);
+    }
+
   return (
-    <header className='bg-transparent m-auto px-20 flex justify-between items-center py-4'>
+    <header className={`w-screen mb-10 py-5 ${toggled ? 'bg-white' : 'bg-transparent'} m-auto flex justify-center items-start flex-col ${styles.header}`}>
         <div className="brand flex justify-start items-center">
             <img src={brandLogo} alt="" className="w-15" />
             <h1 className='text-2xl font-semibold text-black'>Maive</h1>
         </div>
-        <nav className='w-fit p-4 rounded-full backdrop:blur-2xl' style={{backgroundColor:'#FFFFFF75'}}>
-            <ul className='flex'>
+    
+            <nav className={`${toggled ? 'block' : 'hidden'} w-screen relative px-4 backdrop:blur-2xl ${styles.nav}`} style={{backgroundColor:'#FFFFFF75'}}>
+            <ul className='lg:flex'>
                 {
                     links.map((item)=> (
-                        <li key={item.id} className='list-none text-sm mx-4'>
+                        <li key={item.id} className={`list-none text-lg mt-4 ${styles.list} mx-4`}>
                             <Link to={''} className='font-semibold text-gray-900 capitalize hover:text-violet-600 transition-colors'>
                             {item.title}
                             </Link>
@@ -32,7 +49,20 @@ function Header() {
                 }
             </ul>
         </nav>
-        <a href="#" className="rounded-full transition-colors bg-transparent border-2 hover:bg-violet-500 hover:text-white border-violet-600 text-black p-3 py-2 font-semibold">Get started</a>
+        
+
+        <button onClick={handleToggle} className="text-black visible lg:hidden absolute text-2xl top-9 right-10">
+
+            {
+                toggled == true ?
+                    <img src={closeIcon} alt="" className='w-5 h-5' />
+                    :
+                    <img src={barsIcon} alt="" className='w-5 h-5' />
+
+            }
+        </button>
+
+        <a href="#" className={`${styles.getStarted} self-center ${toggled ? 'block' : 'hidden'} rounded-full transition-colors bg-transparent border-2 mt-5 hover:bg-violet-500 hover:text-white border-violet-600 text-black p-3 py-2 font-semibold`}>Get started</a>
     </header>
   )
 }
