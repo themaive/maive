@@ -12,6 +12,7 @@ import founderProfile from '../assets/founder.jpg';
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
 import FaqItem from '../components/FaqItem'
+import OurWorkComponent from '../components/OurWorkComponent'
 
 function HomePage() {
   return (
@@ -105,8 +106,14 @@ function OurServices() {
 
 function OurWork () {
   return (
-    <section className='w-screen h-screen bg-white py-10' id='our-work'>
-      <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
+    <section className='container flex justify-between items-center flex-col mx-auto min-h-screen h-full max-h-max py-10' id='our-work'>
+       <div className='flex justify-center items-center flex-col'>
+        <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
+      <h2 className="text-2xl font-normal mt-10 text-black">A quick look at how we bring ideas to life.</h2>
+      </div>
+      {/* <VSpacer height={5} /> */}
+      <OurWorkComponent></OurWorkComponent>
+      <div></div>
     </section>
   )
 }
