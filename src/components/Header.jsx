@@ -22,7 +22,7 @@ function Header() {
         header: 'lg:bg-transparent lg:justify-between lg:items-center lg:py-4 lg:flex-row lg:px-20 lg:m-0',
         nav: 'lg:rounded-full lg:w-fit lg:visible lg:flex lg:p-4 lg:justify-center lg:items-center',
         list: 'lg:text-sm lg:mt-0',
-        getStarted: 'lg:block'
+        getStarted: 'lg:block lg:m-0'
     }
 
     const handleToggle = () => {
@@ -51,7 +51,7 @@ function Header() {
         </nav>
         
 
-        <button onClick={handleToggle} className="text-black visible lg:hidden absolute text-2xl top-9 right-10">
+        <button onClick={handleToggle} className="text-black visible lg:hidden absolute text-2xl top-9 right-5">
 
             {
                 toggled == true ?

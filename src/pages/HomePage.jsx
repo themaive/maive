@@ -52,26 +52,28 @@ function HomePage() {
 function Banner() {
 
   const styles = {
-    heading: 'sm:text-7xl sm:leading-20'
+    main: 'lg:pt-20 lg:h-screen lg:justify-center',
+    heading: 'sm:text-7xl sm:leading-20',
+    scrollIcon: 'lg:text-5xl my-10',
   }
 
   return (
-    <main className='container m-auto bg-transparent w-screen h-screen flex flex-col justify-center items-center p-4 pt-20'>
+    <main className={`${styles.main} container m-auto bg-transparent w-screen h-10/12 flex flex-col justify-start items-center px-4`}>
       <h2 className={`text-3xl  font-semibold text-black text-center ${styles.heading}`}>Empowering Innovation <br />
         <span className='text-white py-5' >with&nbsp;</span>
         Intelligent Tech
       </h2>
-      <h4 className='w-2/4 text-2xl text-center mt-10'>
+      <h4 className='w-full lg:w-2/4 text-2xl text-center mt-10'>
         Build faster, smarter, and bolder with our cutting-edge solutions designed for the future of <br /> digital transformation
       </h4>
       <VSpacer height={5} />
       <ButtonWithText title={'Start you project'} icon={'angles-right'}></ButtonWithText>
       <VSpacer height={2} />
-      <h5 className='text-lg'>Looking for pre-build projects? &nbsp;
-        <a href="#" className='text-violet-700 hover:text-violet-600 transition-colors'>Get it from here.</a>
+      <h5 className='text-lg flex-wrap flex justify-center items-center text-black'>Looking for pre-build projects? &nbsp;
+        <a href="#" className='text-violet-600 hover:text-violet-800 transition-colors'>Get it from here.</a>
       </h5>
       <VSpacer height={5} />
-      <i className="text-black text-center text-5xl rotate-180 fas fa-angles-up my-10"></i>
+      <i className={`text-black text-center text-4xl m-0 p-0 rotate-180 fas fa-angles-up ${styles.scrollIcon}`}></i>
     </main>
   )
 }
