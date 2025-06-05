@@ -15,7 +15,7 @@ function SignIn() {
 
   return (
     <section className='w-screen min-h-screen h-full px-4'>
-      <AuthHeader signIn={true}></AuthHeader>
+      <AuthHeader title={'Forgot password?'} to={'/auth/forgot-password'}></AuthHeader>
 
       <main className={`mt-5 p-2 w-full h-full mx-auto my-auto flex justify-between items-start ${styles.main}`}>
         <BackButton to={'/auth/sign-up'}></BackButton>

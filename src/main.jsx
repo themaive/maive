@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage.jsx'
 import SignIn from './pages/auth/SignIn.jsx'
 import ForgotPassword from './pages/auth/ForgotPassword.jsx'
 import ResetCode from './pages/auth/ResetCode.jsx'
+import NewPassword from './pages/auth/NewPassword.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,8 +23,10 @@ createRoot(document.getElementById('root')).render(
             <Route path={'sign-in'} element={<SignIn/>}></Route>
             <Route path={'forgot-password'} element={<ForgotPassword/>}></Route>
             <Route path={'reset-code'} element={<ResetCode/>}></Route>
+            <Route path={'new-password'} element={<NewPassword/>}></Route>
           </Route>
         </Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>,

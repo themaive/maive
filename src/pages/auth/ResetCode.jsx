@@ -17,7 +17,7 @@ const styles = {
 
   return (
     <section className='w-screen min-h-screen h-full px-4'>
-      <AuthHeader></AuthHeader>
+      <AuthHeader title={'user@123gmail.com'} to={'/home'} ></AuthHeader>
 
       <main className={`mt-5 p-2 w-full h-full mx-auto my-auto flex justify-between items-start ${styles.main}`}>
         <BackButton to={'/auth/forgot-password'}></BackButton>
@@ -27,7 +27,7 @@ const styles = {
         <InputField hint={'Enter code'} type={'email'}></InputField>
         <VSpacer height={2}></VSpacer>
         <PrimaryButton title={'Continue'} onClick={()=>{
-          navigate('/auth/reset-code');
+          navigate('/auth/new-password');
         }}></PrimaryButton>
         <VSpacer height={2} />
       </form>
