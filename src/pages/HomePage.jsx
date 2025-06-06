@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Header from '../components/Header'
 import VSpacer from '../components/VSpacer'
 import ButtonWithText from '../components/ButtonWithText'
@@ -16,13 +16,17 @@ import OurWorkComponent from '../components/OurWorkComponent'
 
 function HomePage() {
 
+  const serviceRef = useRef(null);
+
+  const refs = [serviceRef];
+
   const styles = {
     particle: 'sm:w-180 sm:h-180'
   }
 
   return (
     <div className="w-screen h-screen bg-transparent">
-      <Header />
+      <Header refs={refs}/>
       <Banner />
       <div className={`-z-40 bg-blue-400 absolute top-2/4 left-2/4 w-full h-2/4 rounded-full blur-3xl ${styles.particle} `} style={{
         transform: 'translate(-50%, -50%)',
@@ -32,7 +36,7 @@ function HomePage() {
       <DividerWithBackground />
       <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
-      <OurServices></OurServices>
+      <OurServices ref={serviceRef}></OurServices>
       <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
@@ -98,8 +102,8 @@ function WhyChooseUs() {
   </section>
 }
 
-function OurServices() {
-  return <section className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
+function OurServices({ref}) {
+  return <section ref={ref} className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
     <div className="flex justify-center items-center flex-col">
       <HeadingWithBottomBorder heading={"our services"}></HeadingWithBottomBorder>
       <h4 className="my-5 font-medium text-black text-2xl text-center w-80 lg:w-auto">Delivering powerful, custom-built software solutions across platforms.</h4>

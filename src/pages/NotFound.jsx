@@ -9,7 +9,7 @@ function NotFound() {
     const navigate = useNavigate();
 
   return (
-    <section className='flex justify-center items-center flex-col'>
+    <section className='flex justify-center items-center flex-col px-4'>
         <AuthHeader></AuthHeader>
         <VSpacer height={5}></VSpacer>
         <div className="w-full h-full flex justify-center items-center flex-col">

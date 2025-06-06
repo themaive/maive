@@ -5,15 +5,15 @@ import BrandLogo from './BrandLogo';
 import barsIcon from '../assets/icons/bars.png';
 import closeIcon from '../assets/icons/close.png';
 
-function Header() {
+function Header({refs}) {
 
     const [toggled, settoggled] = useState(false);
 
     const links = [
         {id:0, title: "home", route:'/'},
-        {id:1, title: "services", route:'/#our-services'},
+        {id:1, title: "services", route:'#our-services'},
         {id:2, title: "products", route:'/'},
-        {id:3, title: "our work", route:'/'},
+        {id:3, title: "our work", route:'/home/#our-work'},
         {id:4, title: "how it works", route:'/'},
         {id:5, title: "contact us", route:'/'}
     ];
@@ -30,7 +30,7 @@ function Header() {
     }
 
   return (
-    <header className={`w-screen mb-10 py-5 ${toggled ? 'bg-white' : 'bg-transparent'} m-auto flex justify-center items-start flex-col ${styles.header}`}>
+    <header className={`w-screen py-5 ${toggled ? 'bg-white' : 'bg-transparent'} m-auto flex justify-center items-start flex-col ${styles.header}`}>
         <BrandLogo></BrandLogo>
     
             <nav className={`${toggled ? 'block' : 'hidden'} w-screen relative px-4 backdrop:blur-2xl ${styles.nav}`} style={{backgroundColor:'#FFFFFF75'}}>
@@ -38,7 +38,9 @@ function Header() {
                 {
                     links.map((item)=> (
                         <li key={item.id} className={`list-none text-lg mt-4 ${styles.list} mx-4`}>
-                            <Link to={''} className='font-semibold text-gray-900 capitalize hover:text-violet-600 transition-colors'>
+                            <Link to={item.route} onClick={()=>{
+                                refs.serviceRef.current.scrollIntoView({behavior:'smooth'})
+                            }} className='font-semibold text-gray-900 capitalize hover:text-violet-600 transition-colors'>
                             {item.title}
                             </Link>
                         </li>
