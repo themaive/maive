@@ -12,7 +12,7 @@ function Header({refs}) {
     const links = [
         {id:0, title: "home", route:'/'},
         {id:1, title: "services", route:'#our-services'},
-        {id:2, title: "products", route:'/'},
+        {id:2, title: "products", route:'/products'},
         {id:3, title: "our work", route:'/home/#our-work'},
         {id:4, title: "how it works", route:'/'},
         {id:5, title: "contact us", route:'/'}

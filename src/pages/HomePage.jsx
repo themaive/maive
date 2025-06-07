@@ -15,6 +15,7 @@ import StepCardComponent from '../components/StepCardComponent'
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
 import howItWorks from '../services/how_it_works.json';
+import BackgroundParticle from '../components/BackgroundParticle'
 
 function HomePage() {
 
@@ -22,18 +23,11 @@ function HomePage() {
 
   const refs = [serviceRef];
 
-  const styles = {
-    particle: 'sm:w-180 sm:h-180'
-  }
-
   return (
     <div className="w-screen h-screen bg-transparent">
       <Header refs={refs}/>
       <Banner />
-      <div className={`-z-40 bg-blue-400 absolute top-2/4 left-2/4 w-full h-2/4 rounded-full blur-3xl ${styles.particle} `} style={{
-        transform: 'translate(-50%, -50%)',
-      }}
-      ></div>
+      <BackgroundParticle></BackgroundParticle>
 
       <DividerWithBackground />
       <WhyChooseUs></WhyChooseUs>
