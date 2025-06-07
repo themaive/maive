@@ -1,6 +1,7 @@
 import React from 'react'
 import brandLogo from '../assets/icon.png';
 import instagramLogo from '../assets/instagram.png';
+import VSpacer from './VSpacer';
 
 
 function Footer() {
@@ -22,7 +23,7 @@ function Footer() {
         </div>
       </section>
       <hr className='block lg:hidden my-5 w-full border-2 border-violet-600 rounded-full'/>
-      <section className='w-full lg:w-2/4 h-full flex justify-start items-start flex-row'>
+      <section className='w-full lg:w-2/4 h-full flex justify-start items-start flex-col lg:flex-row'>
         <div className="flex justify-start items-start w-full h-full py-5 flex-col">
           <div className="p-2">
             <h2 className="text-xl pb-1 font-semibold capitalize">Useful links
@@ -57,21 +58,25 @@ function Footer() {
       <section className='w-full'>
         <hr className='w-full border-2 border-violet-600 rounded-full'/>
       <div className="flex justify-center items-center">
-        <ul className='w-full flex flex-col lg:flex-row mx-auto justify-center items-center py-4'>
-          <li  className='transition-colors text-md my-2 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
+        <ul className='w-full flex flex-col lg:flex-row mx-auto justify-center items-center pt-2'>
+          <li  className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
             <a href="#">terms and conditions</a>
           </li>
-          <li className='transition-colors text-md my-2 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
+          <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
             <a href="#">privacy policy</a>
           </li>
-          <li className='transition-colors text-md my-2 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
+          <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
             <a href="#">return and refund policy</a>
           </li>
-          <li className='transition-colors text-md my-2 text-gray-400 hover:text-gray-100 capitalize px-2'>
+          <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2'>
             <a href="#">shipping and delivery policy</a>
           </li>
         </ul>
       </div>
+      <p class="text-sm text-gray-500 text-center text-wrap w-full mb-5">
+        This website is built using <a href="https://reactjs.org" class="underline">React</a> and <a href="https://tailwindcss.com" class="underline">Tailwind CSS</a>.  
+        Icon resources are provided by <a href="https://fontawesome.com/" class="underline">Font Awesome</a> and Icons from <a href="https://www.flaticon.com/" class="underline">Flaticon.com</a> by various authors, used under their respective licenses.
+      </p>
       </section>
       </section>
     </footer>
