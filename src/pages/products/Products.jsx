@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import VSpacer from '../../components/VSpacer'
 import PrimaryButton from '../../components/PrimaryButton'
 import BackgroundParticle from '../../components/BackgroundParticle'
+import ProductSearchComponent from './ProductSearchComponent'
 
 function Products() {
 
@@ -12,6 +13,9 @@ function Products() {
         <Banner></Banner>
 
         <BackgroundParticle></BackgroundParticle>
+
+        <ProductSearchComponent></ProductSearchComponent>
+
     </section>
   )
 }
@@ -56,7 +60,8 @@ function BannerButton () {
             {
                 buttons.map((item) => (
                     <li className={`m-1 ${selected == item.id ? 'text-white font-medium' : 'text-black font-normal'}`}>
-                        <button onClick={()=> {handleSetSelected(item)}} className={`rounded-full w-60 h-15 p-5 flex justify-center items-center ${selected == item.id ? 'bg-violet-500' : 'bg-gray-50'}`}>{item.title}</button>
+                        <button onClick={()=> {handleSetSelected(item)}} className={`rounded-full w-60 h-15 p-5 flex justify-center items-center transition-colors
+                             ${selected == item.id ? 'bg-violet-600' : 'bg-gray-50 hover:bg-violet-50'}`}>{item.title}</button>
                     </li>
                 ))
             }
