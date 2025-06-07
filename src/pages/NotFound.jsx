@@ -15,7 +15,7 @@ function NotFound() {
         <div className="w-full h-full flex justify-center items-center flex-col">
             <h1 className="text-9xl lg:text-9xl lg:font-semibold text-violet-600">404</h1>
             <VSpacer height={2}></VSpacer>
-            <h4 className='text-black text-2xl w-11/12 mb-10 lg:text-4xl lg:w-4/12 font-medium text-center'>
+            <h4 className='text-black text-2xl w-screen mx-2 mb-10 lg:text-4xl lg:w-4/12 font-medium text-center'>
                 Oops! Looks like you’ve wandered into a parallel universe that doesn’t exist.
             </h4>
             <div className="lg:w-fit lg:mt-10">
