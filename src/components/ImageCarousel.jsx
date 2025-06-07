@@ -31,27 +31,24 @@ function ImageCarousel() {
         }
     }
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            handleNext();
-        }, 3000);
-    }, [selectedImage]);
-
   return (
-    <div className='w-full h-full flex flex-col' style={{
+    <div className='w-full max-h-screen lg:h-full mt-4 lg:mt-0 bg-amber-300 min-h-50 flex flex-col justify-center items-center' style={{
         backgroundImage:`url(${images[selectedImage].src})`,
-        backgroundSize:'contain',
+        backgroundSize:'cover',
+        backgroundOrigin:'content-box',
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center'
     }}>
-        {/* <div className="flex justify-between items-center h-full">
+        <div className="h-full"></div>
+
+        <div className="flex justify-between items-center w-full h-full">
             <button onClick={handlePrev} className='hover:bg-violet-400 transition-colors p-4 bg-violet-500 text-white text-2xl cursor-default'>
                 <i className="fas fa-angle-left"></i>
             </button>
             <button onClick={handleNext} className='hover:bg-violet-400 transition-colors p-4 bg-violet-500 text-white text-2xl cursor-default'>
                 <i className="fas fa-angle-right"></i>
             </button>
-        </div> */}
+        </div>
 
         <div className="w-full h-full flex justify-center items-end">
             {

@@ -8,9 +8,11 @@ import VSpacer from './VSpacer';
 
 function OurWorkComponent() {
     return (
-        <div className='w-10/12 border-2 border-violet-100 rounded-2xl overflow-hidden bg-violet-100 h-auto min-h-7/12 flex justify-between items-center'>
-            <ImageCarousel></ImageCarousel>
-            <div className="min-w-6/12 w-auto h-full p-5 bg-white text-black flex flex-col justify-around items-center">
+        <div className='w-11/12 lg:w-10/12 mx-auto lg:border-2 lg:border-violet-100 lg:rounded-2xl overflow-hidden h-auto min-h-7/12 flex justify-between items-center flex-col lg:flex-row'>
+            <div className="h-full w-full">
+                <ImageCarousel></ImageCarousel>
+            </div>
+            <div className="w-full lg:min-w-6/12 h-full max-h-max mt-5 lg:m-0 lg:p-5 text-black flex flex-col justify-start items-center">
                 <div className="my-2">
                     <h2 className="text-2xl font-bold capitalize">Student course management system</h2>
                     <VSpacer height={1}></VSpacer>
@@ -22,7 +24,7 @@ function OurWorkComponent() {
 
                     <h5 className="font-semibold mt-4">What We Delivered</h5>
 
-                    <ul className='w-auto bg-violet-100 mt-3 p-5 px-10' style={{
+                    <ul className='w-auto lg:bg-violet-100 mt-3 p-5 lg:px-10' style={{
                         listStyleImage:`url(${listImage})`
                     }}>
                         <li className='font-medium'>Full-featured desktop application</li>
@@ -32,7 +34,7 @@ function OurWorkComponent() {
                     </ul>
                 </div>
 
-                <div className="text-white w-full h-auto mt-5">
+                <div className="text-white w-full lg:w-2/4 h-auto mt-5">
                     <PrimaryButton title={'contact us'}></PrimaryButton>
                 </div>
 

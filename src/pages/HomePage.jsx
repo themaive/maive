@@ -40,7 +40,7 @@ function HomePage() {
       <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
-      <AboutTheFounder></AboutTheFounder>
+      {/* <AboutTheFounder></AboutTheFounder>
       <DividerWithBackground/>
       <Testimonials></Testimonials>
       <DividerWithBackground/>
@@ -48,7 +48,7 @@ function HomePage() {
       <DividerWithBackground/>
       <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
       <DividerWithBackground/>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   )
 }
@@ -125,10 +125,10 @@ function OurServices({ref}) {
 
 function OurWork () {
   return (
-    <section className='container flex justify-between items-center flex-col mx-auto min-h-screen h-full max-h-max py-10' id='our-work'>
+    <section className='w-screen lg:container flex justify-between items-center flex-col mx-auto min-h-screen lg:h-screen py-10' id='our-work'>
        <div className='flex justify-center items-center flex-col'>
         <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
-      <h2 className="text-2xl font-normal mt-10 text-black">A quick look at how we bring ideas to life.</h2>
+        <h2 className="text-xl lg:text-2xl text-center font-normal mt-10 text-black">A quick look at how we bring ideas to life.</h2>
       </div>
       {/* <VSpacer height={5} /> */}
       <OurWorkComponent></OurWorkComponent>
