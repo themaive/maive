@@ -8,11 +8,13 @@ import ServiceCard from '../components/ServiceCard'
 import DividerWithBackground from '../components/DividerWithBackground'
 import Footer from '../components/Footer';
 import founderProfile from '../assets/founder.jpg';
+import FaqItem from '../components/FaqItem'
+import OurWorkComponent from '../components/OurWorkComponent'
+import StepCardComponent from '../components/StepCardComponent'
 
 import services from '../services/services_data.json';
 import data from '../services/why_choose_us.json';
-import FaqItem from '../components/FaqItem'
-import OurWorkComponent from '../components/OurWorkComponent'
+import howItWorks from '../services/how_it_works.json';
 
 function HomePage() {
 
@@ -43,11 +45,11 @@ function HomePage() {
       {/* <AboutTheFounder></AboutTheFounder>
       <DividerWithBackground/>
       <Testimonials></Testimonials>
-      <DividerWithBackground/>
-      <HowItWorks></HowItWorks>
-      <DividerWithBackground/>
-      <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
       <DividerWithBackground/> */}
+      <HowItWorks></HowItWorks>
+      {/* <DividerWithBackground/>
+      <FrequentlyAskedQuestions></FrequentlyAskedQuestions> */}
+      <DividerWithBackground/>
       <Footer></Footer>
     </div>
   )
@@ -117,7 +119,7 @@ function OurServices({ref}) {
       }
     </div>
     <VSpacer height={5} />
-    <div className="grid justify-items-center">
+    <div className="flex justify-center text-center lg:w-full lg:m-0 ">
       <ButtonWithText title={'Request a custom service'} icon={''}></ButtonWithText>
     </div>
   </section>
@@ -125,10 +127,10 @@ function OurServices({ref}) {
 
 function OurWork () {
   return (
-    <section className='w-screen lg:container flex justify-between items-center flex-col mx-auto min-h-screen lg:h-screen py-10' id='our-work'>
+    <section className='w-screen lg:container flex justify-between items-center flex-col mx-auto min-h-screen lg:min-h-screen h-full py-10' id='our-work'>
        <div className='flex justify-center items-center flex-col'>
         <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
-        <h2 className="text-xl lg:text-2xl text-center font-normal mt-10 text-black">A quick look at how we bring ideas to life.</h2>
+        <h2 className="text-xl lg:text-2xl text-center font-normal my-10 text-black">A quick look at how we bring ideas to life.</h2>
       </div>
       {/* <VSpacer height={5} /> */}
       <OurWorkComponent></OurWorkComponent>
@@ -205,8 +207,17 @@ function Testimonials () {
 }
 function HowItWorks () {
   return (
-    <section className='w-screen h-screen bg-white py-10' id='how-it-works'>
-      <HeadingWithBottomBorder heading={'how it works'}></HeadingWithBottomBorder>
+    <section className='container flex justify-around items-center flex-col mx-auto min-h-screen h-auto py-10'>
+        <HeadingWithBottomBorder heading={'how it works'}></HeadingWithBottomBorder>
+        <VSpacer height={5} />
+      <div className="w-auto h-auto flex justify-around items-center flex-wrap">
+        {
+          howItWorks.map((item)=> (
+            <StepCardComponent key={item.id} item={item}></StepCardComponent>
+          ))
+        }
+      </div>
+      <VSpacer height={5} />
     </section>
   )
 }

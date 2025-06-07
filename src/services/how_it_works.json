@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "You share your idea or requirement"
+    },
+    {
+        "id": 2,
+        "title": "Maive review it and share a quote"
+    },
+    {
+        "id": 3,
+        "title": "Development begins"
+    },
+    {
+        "id": 4,
+        "title": "Product is delivered and reviewed"
+    },
+    {
+        "id": 5,
+        "title": "You get the final files"
+    },
+    {
+        "id": 6,
+        "title": "You get support"
+    }
+]

@@ -12,7 +12,7 @@ function OurWorkComponent() {
             <div className="h-full w-full">
                 <ImageCarousel></ImageCarousel>
             </div>
-            <div className="w-full lg:min-w-6/12 h-full max-h-max mt-5 lg:m-0 lg:p-5 text-black flex flex-col justify-start items-center">
+            <div className="w-full lg:min-w-6/12 h-full overflow-y-auto max-h-max mt-5 lg:m-0 lg:p-5 text-black flex flex-col justify-start items-center">
                 <div className="my-2">
                     <h2 className="text-2xl font-bold capitalize">Student course management system</h2>
                     <VSpacer height={1}></VSpacer>
