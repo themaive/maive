@@ -127,7 +127,7 @@ function OurServices({ref}) {
 
 function OurWork () {
   return (
-    <section className='w-screen lg:container flex justify-between items-center flex-col mx-auto min-h-screen lg:min-h-screen h-full py-10' id='our-work'>
+    <section className='w-screen lg:container flex justify-between items-center flex-col mx-auto min-h-screen h-auto lg:min-h-screen lg:h-full py-10' id='our-work'>
        <div className='flex justify-center items-center flex-col'>
         <HeadingWithBottomBorder heading={'our work'}></HeadingWithBottomBorder>
         <h2 className="text-xl lg:text-2xl text-center font-normal my-10 text-black">A quick look at how we bring ideas to life.</h2>
@@ -167,7 +167,7 @@ function AboutTheFounder () {
         <h4 className='font-medium text-lg text-gray-700 p-3 lg:p-0'><span className='lg:mx-2 font-semibold'>Vision:</span> Empower individuals and students by bringing their software ideas to life — with passion, precision, and commitment.</h4>
       </li>
         <li className='w-full p-5 flex justify-start lg:justify-center border-2 border-gray-100 items-center my-2'>
-        <i className="fas fa-cog text-gray-900 bg-amber-300"></i>
+        <i className="fas fa-cog text-violet-600"></i>
         <h4 className='font-medium text-lg text-gray-700 p-3 lg:p-0'><span className='lg:mx-2  font-semibold'>Tech Stack:</span>Java, Spring Boot, Node.js, ReactJS, MySQL, MongoDB, HTML, CSS, JavaScript, Swing, and more.</h4>
       </li>
      </ul>

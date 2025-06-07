@@ -8,11 +8,11 @@ import VSpacer from './VSpacer';
 
 function OurWorkComponent() {
     return (
-        <div className='w-11/12 lg:w-10/12 mx-auto lg:border-2 lg:border-violet-100 lg:rounded-2xl overflow-hidden h-auto min-h-7/12 flex justify-between items-center flex-col lg:flex-row'>
+        <div className='w-11/12 lg:w-10/12 mx-auto lg:border-2 lg:border-violet-100 lg:rounded-2xl h-auto min-h-7/12 flex justify-between items-center flex-col lg:flex-row'>
             <div className="h-full w-full">
                 <ImageCarousel></ImageCarousel>
             </div>
-            <div className="w-full lg:min-w-6/12 h-full overflow-y-auto max-h-max mt-5 lg:m-0 lg:p-5 text-black flex flex-col justify-start items-center">
+            <div className="w-full lg:min-w-6/12 lg:min-h-auto md:overflow-y-auto  mt-5 lg:m-0 lg:p-5 text-black flex flex-col justify-start items-center">
                 <div className="my-2">
                     <h2 className="text-2xl font-bold capitalize">Student course management system</h2>
                     <VSpacer height={1}></VSpacer>
