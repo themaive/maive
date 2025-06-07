@@ -47,8 +47,8 @@ function HomePage() {
       <HowItWorks></HowItWorks>
       <DividerWithBackground/>
       <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
-      <DividerWithBackground/>
-      <Footer></Footer> */}
+      <DividerWithBackground/> */}
+      <Footer></Footer>
     </div>
   )
 }

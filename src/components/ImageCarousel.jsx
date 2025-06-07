@@ -32,7 +32,7 @@ function ImageCarousel() {
     }
 
   return (
-    <div className='w-full max-h-screen lg:h-full mt-4 lg:mt-0 bg-amber-300 min-h-50 flex flex-col justify-center items-center' style={{
+    <div className='w-full max-h-screen lg:h-full mt-4 lg:mt-0 bg-violet-200 min-h-50 flex flex-col justify-center items-center' style={{
         backgroundImage:`url(${images[selectedImage].src})`,
         backgroundSize:'cover',
         backgroundOrigin:'content-box',
