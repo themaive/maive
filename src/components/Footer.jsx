@@ -9,19 +9,19 @@ function Footer() {
       <section className="container mx-auto w-full h-full flex justify-between items-start flex-col">
       <div className="w-full flex justify-center items-center flex-col lg:flex-row">
         <section className=' w-full mx-4 lg:m-0 lg:w-2/4'>
-          <div className="w-full flex justify-between items-center lg:items-start flex-col">
+          <div className="w-full flex justify-center items-center lg:items-start flex-col">
            <div className="brand flex justify-start items-center w-full ">
             <img src={brandLogo} alt="" className="w-25" />
             <h1 className='text-4xl font-semibold text-white'>Maive</h1>
           </div>
-          <h2 className="font-semibold text-xl text-white w-auto text-center mx-5 lg:mx-0 lg:text-left">From Concept to Code — Seamlessly.</h2>
-          <a href="https://instagram.com/themaive.in/" target='_blank' className="flex justify-start items-center my-5">
+          <h2 className="font-semibold text-xl text-white w-auto text-center mx-2 lg:mx-0 lg:text-left">From Concept to Code — Seamlessly.</h2>
+          {/* <a href="https://instagram.com/themaive.in/" target='_blank' className="flex justify-start items-center my-5">
             <img src={instagramLogo} alt="" className='w-8' />
             <span className='m-2'>themaive.in</span>
-          </a>
+          </a> */}
         </div>
       </section>
-      <hr className='block lg:hidden w-full border-2 border-violet-600 rounded-full'/>
+      <hr className='block lg:hidden my-5 w-full border-2 border-violet-600 rounded-full'/>
       <section className='w-full lg:w-2/4 h-full flex justify-start items-start flex-row'>
         <div className="flex justify-start items-start w-full h-full py-5 flex-col">
           <div className="p-2">

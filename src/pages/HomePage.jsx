@@ -42,13 +42,13 @@ function HomePage() {
       <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
-      {/* <AboutTheFounder></AboutTheFounder>
+      <AboutTheFounder></AboutTheFounder>
       <DividerWithBackground/>
       <Testimonials></Testimonials>
-      <DividerWithBackground/> */}
+      <DividerWithBackground/>
       <HowItWorks></HowItWorks>
-      {/* <DividerWithBackground/>
-      <FrequentlyAskedQuestions></FrequentlyAskedQuestions> */}
+      <DividerWithBackground/>
+      <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
       <DividerWithBackground/>
       <Footer></Footer>
     </div>
@@ -69,7 +69,7 @@ function Banner() {
         <span className='text-white py-5' >with&nbsp;</span>
         Intelligent Tech
       </h2>
-      <h4 className='w-full lg:w-2/4 text-2xl text-center mt-10'>
+      <h4 className='w-full lg:w-2/4 text-2xl text-center mt-10 text-black font-medium'>
         Build faster, smarter, and bolder with our cutting-edge solutions designed for the future of <br /> digital transformation
       </h4>
       <VSpacer height={5} />
@@ -140,35 +140,35 @@ function OurWork () {
 }
 function AboutTheFounder () {
   return (
-    <section className='container flex justify-between items-center flex-col mx-auto h-screen py-10' id='about-the-founder'>
+    <section className='container flex justify-between items-center flex-col mx-auto lg:h-screen h-auto py-10' id='about-the-founder'>
       <div className='flex justify-center items-center flex-col'>
         <HeadingWithBottomBorder heading={'about the founder'}></HeadingWithBottomBorder>
-      <h2 className="text-2xl font-normal mt-10 text-black">Hi, I'm <span className='font-semibold'>Madhan</span> - the developer behind the code.</h2>
+      <h2 className="text-xl lg:text-2xl font-normal  lg:mx-0 text-center my-10 text-black">Hi, I'm <span className='font-semibold'>Madhan</span> - the developer behind the code.</h2>
       </div>
 
-      <main className='w-full relative h-6/12 flex justify-center items-center '>
-        <div className="absolute top-0 left-20 w-60 h-auto bg-gray-300 overflow-hidden border-2 border-violet-600" style={{borderTopLeftRadius:'25%', borderBottomRightRadius:"25%"}}>
+      <main className='w-full relative h-6/12 flex justify-center items-center flex-col lg:flex-row'>
+        <div className="lg:absolute lg:top-0 lg:left-20 w-2/4 lg:w-60 h-auto bg-gray-300 overflow-hidden border-2 border-violet-600 rounded-tl-[25%] rounded-br-[25%]">
           <img src={founderProfile} alt="" className="w-full h-full object-scale-up" />
         </div>
-        <div className="flex justify-center h-full w-full max-w-9/12 max-h-10/12 bg-violet-700">
-          <div className="w-8/12 h-full flex-col flex justify-evenly items-end">
-              <p className='font-medium text-lg'>I’m a passionate software developer and the founder of this startup, where I specialize in delivering custom-built software solutions for both final-year students and corporate professionals. </p>
+        <div className="flex justify-center h-full w-full max-w-11/12 lg:max-w-9/12 max-h-10/12 text-black lg:bg-violet-600 lg:text-white my-2 lg:my-0 py-10 lg:py-0">
+          <div className="w-full px-2 lg:px-0 lg:w-8/12 h-full flex-col flex justify-evenly items-end">
+              <p className='font-medium text-lg my-2 lg:m-0'>I’m a passionate software developer and the founder of this startup, where I specialize in delivering custom-built software solutions for both final-year students and corporate professionals. </p>
 
-            <p className='font-medium text-lg'>From mobile and web apps to backend servers and desktop applications, I personally handle each project — turning ideas into reliable, user-friendly software. </p>
+            <p className='font-medium text-lg my-2 lg:m-0'>From mobile and web apps to backend servers and desktop applications, I personally handle each project — turning ideas into reliable, user-friendly software. </p>
 
-            <p className='font-medium text-lg'> What started as a personal interest in programming has grown into a mission: to make high-quality, purpose-driven software accessible to students and individuals alike.</p>
+            <p className='font-medium text-lg my-2 lg:m-0'> What started as a personal interest in programming has grown into a mission: to make high-quality, purpose-driven software accessible to students and individuals alike.</p>
           </div>
         </div>
       </main>
 
-     <ul className='w-fit h-auto'>
-      <li className='w-full p-5 flex justify-start border-2 border-gray-100 items-center my-2'>
+     <ul className='w-11/12 lg:w-fit h-auto'>
+      <li className='w-full p-5 flex justify-start lg:justify-center border-2 border-gray-100 items-center my-2'>
         <i className="fas fa-lightbulb text-amber-300"></i>
-        <h4 className='font-medium text-lg text-gray-700'><span className='mx-2 font-semibold'>Vision:</span> Empower individuals and students by bringing their software ideas to life — with passion, precision, and commitment.</h4>
+        <h4 className='font-medium text-lg text-gray-700 p-3 lg:p-0'><span className='lg:mx-2 font-semibold'>Vision:</span> Empower individuals and students by bringing their software ideas to life — with passion, precision, and commitment.</h4>
       </li>
-        <li className='w-full p-5 flex justify-start border-2 border-gray-100 items-center my-2'>
-        <i className="fas fa-cog text-gray-900"></i>
-        <h4 className='font-medium text-lg text-gray-700'><span className='mx-2 font-semibold'>Tech Stack:</span>Java, Spring Boot, Node.js, ReactJS, MySQL, MongoDB, HTML, CSS, JavaScript, Swing, and more.</h4>
+        <li className='w-full p-5 flex justify-start lg:justify-center border-2 border-gray-100 items-center my-2'>
+        <i className="fas fa-cog text-gray-900 bg-amber-300"></i>
+        <h4 className='font-medium text-lg text-gray-700 p-3 lg:p-0'><span className='lg:mx-2  font-semibold'>Tech Stack:</span>Java, Spring Boot, Node.js, ReactJS, MySQL, MongoDB, HTML, CSS, JavaScript, Swing, and more.</h4>
       </li>
      </ul>
 
