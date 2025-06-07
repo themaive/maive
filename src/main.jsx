@@ -11,6 +11,7 @@ import ResetCode from './pages/auth/ResetCode.jsx'
 import NewPassword from './pages/auth/NewPassword.jsx'
 import NotFound from './pages/NotFound.jsx'
 import CheckOut from './pages/order/CheckOut.jsx'
+import PaymentSucces from './pages/order/PaymentSucces.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,12 +27,11 @@ createRoot(document.getElementById('root')).render(
             <Route path={'reset-code'} element={<ResetCode/>}></Route>
             <Route path={'new-password'} element={<NewPassword/>}></Route>
           </Route>
-          <Route path={'/order/checkout'} element={<CheckOut />}>
-
+          <Route path={'order/checkout'} element={<CheckOut />} />
+          <Route path={'payment/success'} element={<PaymentSucces />} />
           </Route>
-        </Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
