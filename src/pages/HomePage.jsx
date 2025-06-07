@@ -177,7 +177,7 @@ function AboutTheFounder () {
 }
 function Testimonials () {
   return (
-    <section className='container flex justify-between items-center flex-col mx-auto h-screen py-10'>
+    <section className='container flex justify-between items-center flex-col mx-auto h-auto min-h-screen py-10'>
       <div className='flex justify-center items-center flex-col'>
         <HeadingWithBottomBorder heading={'client testimonials'}></HeadingWithBottomBorder>
       <h2 className="text-2xl font-semibold mt-10 text-black">What our happy clients say</h2>
@@ -186,19 +186,19 @@ function Testimonials () {
       <main className='w-full h-2/12 flex justify-center items-center flex-col'>
        {/* <div className="flex justify-center items-center"> */}
          <i className="text-7xl text-violet-600 fas fa-quote-left m-10 self-start"></i>
-        <h1 className='text-black text-center text-3xl font-normal text-wrap w-10/12'>The software <span className='font-semibold'>Maive</span> built exceeded my expectations. Everything was explained clearly and delivered on time. </h1>
+        <h1 className='text-black text-center text-2xl font-normal text-wrap w-10/12'>The software <span className='font-medium'>maive</span> built exceeded my expectations. Everything was explained clearly and delivered on time. </h1>
         <i className="text-7xl text-violet-600 fas fa-quote-right m-10 self-end"></i>
        {/* </div> */}
 
 
       </main>
         <div className="flex items-center justify-center text-black self-end">
-          <span className='text-4xl font-bold'>-</span>
-          <h4 className="text-xl text-end font-semibold w-full"> Dhanush M. MBA, Student.</h4>
+          <span className='text-4xl font-bold hidden lg:block'>-</span>
+          <h4 className="text-lg lg:text-xl mx-5 lg:mx-0 mb-4 lg:my-0 text-end font-semibold w-full"> Dhanush M. MBA, Student.</h4>
         </div>
 
-      <h5 className='font-medium text-black text-lg'>
-        Want to be our next happy client?&nbsp;
+      <h5 className='font-medium text-black text-lg text-wrap mx-4 lg:mx-0 mt-4 lg:mt-0 text-center'>
+        Want to be our next happy client?&nbsp;<br className='block lg:hidden'/>
         <a href="#" className='text-violet-700 hover:text-violet-500 transition-colors'>Let's build something great together.</a>
       </h5>
 
