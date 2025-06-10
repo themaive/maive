@@ -4,19 +4,22 @@ import VSpacer from '../../components/VSpacer'
 import PrimaryButton from '../../components/PrimaryButton'
 import BackgroundParticle from '../../components/BackgroundParticle'
 import ProductSearchComponent from './ProductSearchComponent'
+import Footer from '../../components/Footer'
 
 function Products() {
 
   return (
-    <section>
+    
+        <section className='w-screen min-h-2/4'>
         <Header></Header>
         <Banner></Banner>
 
         <BackgroundParticle></BackgroundParticle>
 
         <ProductSearchComponent></ProductSearchComponent>
-
     </section>
+    
+
   )
 }
 
@@ -59,7 +62,7 @@ function BannerButton () {
         <ul className='rounded-full p-0.5  flex justify-between items-center w-auto' style={{backgroundColor:'#FFFFFF50'}}>
             {
                 buttons.map((item) => (
-                    <li className={`m-1 ${selected == item.id ? 'text-white font-medium' : 'text-black font-normal'}`}>
+                    <li key={item.id} className={`m-1 ${selected == item.id ? 'text-white font-medium' : 'text-black font-normal'}`}>
                         <button onClick={()=> {handleSetSelected(item)}} className={`rounded-full w-60 h-15 p-5 flex justify-center items-center transition-colors
                              ${selected == item.id ? 'bg-violet-600' : 'bg-gray-50 hover:bg-violet-50'}`}>{item.title}</button>
                     </li>

@@ -14,6 +14,7 @@ import CheckOut from './pages/order/CheckOut.jsx'
 import PaymentSucces from './pages/order/PaymentSucces.jsx'
 import PaymentFailed from './pages/order/PaymentFailed.jsx'
 import Products from './pages/products/Products.jsx'
+import ViewDetails from './pages/products/ViewDetails.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -34,7 +35,9 @@ createRoot(document.getElementById('root')).render(
             <Route path={'success'} element={<PaymentSucces/>}></Route>
             <Route path={'failed'} element={<PaymentFailed/>}></Route>
           </Route>
-          <Route path={'products'} element={<Products></Products>}></Route>
+          <Route path={'products/'} element={<Products></Products>}>
+          </Route>
+          <Route path={'/product/details'} element={<ViewDetails></ViewDetails>} />
           </Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>

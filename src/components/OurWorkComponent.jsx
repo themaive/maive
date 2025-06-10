@@ -35,7 +35,7 @@ function OurWorkComponent() {
                 </div>
 
                 <div className="text-white w-full lg:w-2/4 h-auto mt-5">
-                    <PrimaryButton title={'contact us'}></PrimaryButton>
+                    <PrimaryButton title={'Contact us'}></PrimaryButton>
                 </div>
 
             </div>

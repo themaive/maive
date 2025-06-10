@@ -58,7 +58,7 @@ function Footer() {
       <section className='w-full'>
         <hr className='w-full border-2 border-violet-600 rounded-full'/>
       <div className="flex justify-center items-center">
-        <ul className='w-full flex flex-col lg:flex-row mx-auto justify-center items-center pt-2'>
+        <ul className='w-full flex flex-col lg:flex-row mx-auto justify-center items-start lg:items-center py-2'>
           <li  className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
             <a href="#">terms and conditions</a>
           </li>
@@ -73,9 +73,10 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p class="text-sm text-gray-500 text-center text-wrap w-full mb-5">
-        This website is built using <a href="https://reactjs.org" class="underline">React</a> and <a href="https://tailwindcss.com" class="underline">Tailwind CSS</a>.  
-        Icon resources are provided by <a href="https://fontawesome.com/" class="underline">Font Awesome</a> and Icons from <a href="https://www.flaticon.com/" class="underline">Flaticon.com</a> by various authors, used under their respective licenses.
+      <hr className='w-full border-2 border-violet-600 rounded-full'/>
+      <p className="text-sm text-gray-500 text-center text-wrap w-full my-5">
+        This website is built using <a href="https://reactjs.org" className="underline">React</a> and <a href="https://tailwindcss.com" className="underline">Tailwind CSS</a>.  
+        Icon resources are provided by <a href="https://fontawesome.com/" className="underline">Font Awesome</a> and Icons from <a href="https://www.flaticon.com/" className="underline">Flaticon.com</a> by various authors, used under their respective licenses.
       </p>
       </section>
       </section>
