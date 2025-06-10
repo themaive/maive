@@ -12,20 +12,20 @@ function ProductCard() {
     }
 
   return (
-    <div className="max-w-100 w-full min-h-40 h-full border-2 border-gray-200  rounded-[25px] px-5 py-4 m-2">
-        <h2 className="font-semibold text-lg text-black capitalize">Android notes app with firebase</h2>
-        <h5 className="text-sm font-medium my-2 text-gray-800">
+    <div className="w-screen lg:max-w-100 lg:w-full min-h-40 h-full border-2 border-gray-200  rounded-[25px] px-5 py-4 my-2 lg:m-2">
+        <h2 className="font-semibold text-xl lg:text-lg text-black capitalize">Android notes app with firebase</h2>
+        <h5 className="text-[1em] lg:text-sm font-medium my-2 text-gray-800">
             A clean and modern note-taking mobile application built using Java and Firebase. Features include user authentication, cloud sync, offline support, and dark mode.
         </h5>
 
         <ul className='text-black my-5'>
-            <li className='text-sm'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
+            <li className='text-[1rem]'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
                 Java, Firebase Auth, Firestore  
             </li>
-            <li className='text-sm'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
+            <li className='text-[1rem]'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
                 Java, Firebase Auth, Firestore  
             </li>
-            <li className='text-sm'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
+            <li className='text-[1rem]'><span className='font-semibold '>Tech Stack&nbsp;:&nbsp;</span>
                 Java, Firebase Auth, Firestore  
             </li>
         </ul>

@@ -5,17 +5,17 @@ import BrandLogo from './BrandLogo';
 import barsIcon from '../assets/icons/bars.png';
 import closeIcon from '../assets/icons/close.png';
 
-function Header({refs}) {
+function Header() {
 
     const [toggled, settoggled] = useState(false);
 
     const links = [
         {id:0, title: "home", route:'/'},
-        {id:1, title: "services", route:'#our-services'},
+        {id:1, title: "services", route:'/#our-services'},
         {id:2, title: "products", route:'/products'},
-        {id:3, title: "our work", route:'/home/#our-work'},
-        {id:4, title: "how it works", route:'/'},
-        {id:5, title: "contact us", route:'/'}
+        {id:3, title: "our work", route:'/#our-work'},
+        {id:4, title: "how it works", route:'/#how-it-works'},
+        {id:5, title: "contact us", route:'/#contact-us'}
     ];
 
     const styles = {
@@ -38,9 +38,7 @@ function Header({refs}) {
                 {
                     links.map((item)=> (
                         <li key={item.id} className={`list-none text-lg mt-4 ${styles.list} mx-4`}>
-                            <Link to={item.route} onClick={()=>{
-                                refs.serviceRef.current.scrollIntoView({behavior:'smooth'})
-                            }} className='font-semibold text-gray-900 capitalize hover:text-violet-600 transition-colors'>
+                            <Link to={item.route} className='font-semibold text-gray-900 capitalize hover:text-violet-600 transition-colors'>
                             {item.title}
                             </Link>
                         </li>

@@ -8,49 +8,50 @@ import Footer from '../../components/Footer'
 
 function Products() {
 
-  return (
-    
+    return (
+
         <section className='w-screen min-h-2/4'>
-        <Header></Header>
-        <Banner></Banner>
+            <Header></Header>
+            <Banner></Banner>
 
-        <BackgroundParticle></BackgroundParticle>
+            <BackgroundParticle></BackgroundParticle>
 
-        <ProductSearchComponent></ProductSearchComponent>
-    </section>
-    
+            <ProductSearchComponent></ProductSearchComponent>
+            <Footer></Footer>
+        </section>
 
-  )
+
+    )
 }
 
-function Banner () {
+function Banner() {
     return (
         <section className='min-h-screen h-auto flex justify-around items-center flex-col container mx-auto lg:py-10'>
             <div className="w-full self-center flex flex-col justify-center items-center">
-                <h2 className="font-semibold text-black lg:text-7xl lg:mt-10 w-[75%] text-center text-wrap">
-                Explore Our Custom-Built 
-                Software Products
-            </h2>
-            <h5 className='text-black text-2xl lg:my-10 w-[50%] text-center'>
-                From academic projects to enterprise-ready tools, find what suits your need.
-            </h5>
+                <h2 className="font-semibold text-black text-4xl w-[90%] lg:text-7xl lg:mt-10 lg:w-[75%] text-center text-wrap">
+                    Explore Our Custom-Built
+                    Software Products
+                </h2>
+                <h5 className='text-black text-xl lg:text-2xl mt-10 w-[80%] lg:w-[50%] text-center'>
+                    From academic projects to enterprise-ready tools, find what suits your need.
+                </h5>
             </div>
             <BannerButton></BannerButton>
         </section>
     )
 }
 
-function BannerButton () {
+function BannerButton() {
 
     const [selected, setSelected] = useState(0);
     const buttons = [
         {
-            id:0,
-            title:'Final Year Project',
+            id: 0,
+            title: 'Final Year Project',
         },
         {
-            id:1,
-            title:'Coporate Tools',
+            id: 1,
+            title: 'Coporate Tools',
         }
     ]
 
@@ -59,11 +60,11 @@ function BannerButton () {
     }
 
     return (
-        <ul className='rounded-full p-0.5  flex justify-between items-center w-auto' style={{backgroundColor:'#FFFFFF50'}}>
+        <ul className='rounded-full p-0.5  flex flex-col lg:flex-row justify-between items-center w-auto bg-transparent' style={{ backgroundColor: '#FFFFFF50' }}>
             {
                 buttons.map((item) => (
                     <li key={item.id} className={`m-1 ${selected == item.id ? 'text-white font-medium' : 'text-black font-normal'}`}>
-                        <button onClick={()=> {handleSetSelected(item)}} className={`rounded-full w-60 h-15 p-5 flex justify-center items-center transition-colors
+                        <button onClick={() => { handleSetSelected(item) }} className={`rounded-full w-60 h-15 p-5 flex justify-center items-center transition-colors
                              ${selected == item.id ? 'bg-violet-600' : 'bg-gray-50 hover:bg-violet-50'}`}>{item.title}</button>
                     </li>
                 ))

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import VSpacer from '../components/VSpacer'
 import ButtonWithText from '../components/ButtonWithText'
@@ -17,22 +17,39 @@ import data from '../services/why_choose_us.json';
 import howItWorks from '../services/how_it_works.json';
 import BackgroundParticle from '../components/BackgroundParticle'
 
+import faqs from '../services/faqs.json';
+import { useLocation } from 'react-router-dom'
+
 function HomePage() {
 
-  const serviceRef = useRef(null);
+  const location = useLocation();
 
-  const refs = [serviceRef];
+  useEffect(()=>{
+
+    console.log(location.hash);
+
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({behavior:'smooth'});
+      }
+    }
+
+
+
+  }, [location]);
+
 
   return (
     <div className="w-screen h-screen bg-transparent">
-      <Header refs={refs}/>
+      <Header/>
       <Banner />
       <BackgroundParticle></BackgroundParticle>
 
       <DividerWithBackground />
       <WhyChooseUs></WhyChooseUs>
       <DividerWithBackground />
-      <OurServices ref={serviceRef}></OurServices>
+      <OurServices></OurServices>
       <DividerWithBackground/>
       <OurWork></OurWork>
       <DividerWithBackground/>
@@ -98,8 +115,8 @@ function WhyChooseUs() {
   </section>
 }
 
-function OurServices({ref}) {
-  return <section ref={ref} className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
+function OurServices() {
+  return <section className='mx-auto container min-h-screen w-full py-10 h-auto' id='our-services'>
     <div className="flex justify-center items-center flex-col">
       <HeadingWithBottomBorder heading={"our services"}></HeadingWithBottomBorder>
       <h4 className="my-5 font-medium text-black text-2xl text-center w-80 lg:w-auto">Delivering powerful, custom-built software solutions across platforms.</h4>
@@ -201,7 +218,7 @@ function Testimonials () {
 }
 function HowItWorks () {
   return (
-    <section className='container flex justify-around items-center flex-col mx-auto min-h-screen h-auto py-10'>
+    <section className='container flex justify-around items-center flex-col mx-auto min-h-screen h-auto py-10' id='how-it-works'>
         <HeadingWithBottomBorder heading={'how it works'}></HeadingWithBottomBorder>
         <VSpacer height={5} />
       <div className="w-auto h-auto flex justify-around items-center flex-wrap">
@@ -218,19 +235,20 @@ function HowItWorks () {
 
 function FrequentlyAskedQuestions () {
   return (
-    <section className='container flex justify-start items-start flex-col mx-auto h-screen py-10'>
+    <section className='container flex justify-start items-start flex-col mx-auto h-auto min-h-screen py-10'>
       <div className='w-full flex justify-center items-center'>
         <HeadingWithBottomBorder heading={'frequently asked questions'}></HeadingWithBottomBorder>
       {/* <h2 className="text-2xl font-semibold mt-10 text-black">What our happy clients say</h2> */}
       </div>
 
-      <ul className='w-full h-full'>
-        <li className='w-full h-auto border-2 border-gray-100 py-5 px-4 mt-4'>
-          <FaqItem></FaqItem>
-        </li>
-        <li className='w-full h-auto border-2 border-gray-100 py-5 px-4 mt-4'>
-          <FaqItem></FaqItem>
-        </li>
+      <ul className='mx-auto w-11/12 lg:w-full h-full'>
+        {
+          faqs.map((item, index)=> (
+            <li key={index} className='w-full h-auto border-2 border-gray-100 py-5 px-4 mt-4'>
+              <FaqItem item={item}></FaqItem>
+            </li>
+          ))
+        }
       </ul>
 
     </section>

@@ -41,7 +41,7 @@ function Footer() {
           </ul>
 
         </div>
-        <div className="w-full h-full py-5 flex justify-start items-start flex-col">
+        <div className="w-full h-full py-5 flex justify-start items-start flex-col" id='contact-us'>
             <div className="p-2">
               <h2 className="text-xl pb-1 font-semibold capitalize">Contact us
               </h2>
