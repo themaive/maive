@@ -77,7 +77,7 @@ function Footer() {
       <hr className='w-full border-2 border-violet-600 rounded-full'/>
       <p className="text-sm text-gray-500 text-center text-wrap w-full my-5">
         This website is built using <a href="https://reactjs.org" className="underline">React</a> and <a href="https://tailwindcss.com" className="underline">Tailwind CSS</a>.  
-        Icon resources are provided by <a href="https://fontawesome.com/" className="underline">Font Awesome</a> and Icons from <a href="https://www.flaticon.com/" className="underline">Flaticon.com</a> by various authors, used under their respective licenses.
+        Icon resources are provided by <a href="https://fontawesome.com/" className="underline">Font Awesome</a> and <a href="https://www.flaticon.com/" className="underline">Flaticon.com</a> by various authors, used under their respective licenses.
       </p>
       </section>
       </section>

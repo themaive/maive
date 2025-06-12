@@ -15,8 +15,8 @@ import PaymentSucces from './pages/order/PaymentSucces.jsx'
 import PaymentFailed from './pages/order/PaymentFailed.jsx'
 import Products from './pages/products/Products.jsx'
 import ViewDetails from './pages/products/ViewDetails.jsx'
-import Policies from './pages/policies/Policies.jsx'
 import Terms from './pages/policies/Terms.jsx'
+import Privacy from './pages/policies/Privacy.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -44,6 +44,7 @@ createRoot(document.getElementById('root')).render(
 
           
           <Route path={'/terms-and-conditions'} element={<Terms></Terms>}></Route>
+          <Route path={'/privacy-policy'} element={<Privacy></Privacy>}></Route>
 
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
