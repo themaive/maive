@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -18,6 +18,7 @@ import ViewDetails from './pages/products/ViewDetails.jsx'
 import Terms from './pages/policies/Terms.jsx'
 import Privacy from './pages/policies/Privacy.jsx'
 import Refund from './pages/policies/Refund.jsx'
+import Shipping from './pages/policies/Shipping.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -47,6 +48,7 @@ createRoot(document.getElementById('root')).render(
           <Route path={'/terms-and-conditions'} element={<Terms></Terms>}></Route>
           <Route path={'/privacy-policy'} element={<Privacy></Privacy>}></Route>
           <Route path={'/return-and-refund'} element={<Refund></Refund>}></Route>
+          <Route path={'/shipping-and-delivery'} element={<Shipping></Shipping>}></Route>
 
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
