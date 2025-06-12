@@ -15,6 +15,8 @@ import PaymentSucces from './pages/order/PaymentSucces.jsx'
 import PaymentFailed from './pages/order/PaymentFailed.jsx'
 import Products from './pages/products/Products.jsx'
 import ViewDetails from './pages/products/ViewDetails.jsx'
+import Policies from './pages/policies/Policies.jsx'
+import Terms from './pages/policies/Terms.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,6 +32,7 @@ createRoot(document.getElementById('root')).render(
             <Route path={'reset-code'} element={<ResetCode/>}></Route>
             <Route path={'new-password'} element={<NewPassword/>}></Route>
           </Route>
+          </Route>
           <Route path={'order/checkout'} element={<CheckOut />} />
           <Route path={'payment'}>
             <Route path={'success'} element={<PaymentSucces/>}></Route>
@@ -38,7 +41,10 @@ createRoot(document.getElementById('root')).render(
           <Route path={'products/'} element={<Products></Products>}>
           </Route>
           <Route path={'/product/details'} element={<ViewDetails></ViewDetails>} />
-          </Route>
+
+          
+          <Route path={'/terms-and-conditions'} element={<Terms></Terms>}></Route>
+
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

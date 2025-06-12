@@ -2,6 +2,7 @@ import React from 'react'
 import brandLogo from '../assets/icon.png';
 import instagramLogo from '../assets/instagram.png';
 import VSpacer from './VSpacer';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -32,12 +33,12 @@ function Footer() {
           </div>
 
           <ul className='mx-4 text-[1rem] lg:text-sm hover:text-'>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">Home</a></li>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">Services</a></li>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">Products</a></li>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">Our work</a></li>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">About the founder</a></li>
-            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="#">How it works</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/">Home</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/#our-services">Services</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/products">Products</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/#our-work">Our work</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/#about-the-founder">About the founder</a></li>
+            <li className='font-semibold mt-2 hover:text-gray-400 transition-colors'><a href="/#how-it-works">How it works</a></li>
           </ul>
 
         </div>
@@ -48,7 +49,7 @@ function Footer() {
                 <hr className='w-20 h-1 rounded-full bg-violet-500 border-0'/>
           </div>
           <ul className='mx-4 text-[1rem] lg:text-sm cursor-default'>
-            <li className='font-semibold my-2'>Email : <a href="#" className='font-medium text-violet-500'>themaive@gmail.com</a></li>
+            <li className='font-semibold my-2'>Email : <a target='_blank' rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=themaive.in@gmail.com" className='font-medium text-violet-500'>themaive@gmail.com</a></li>
             <li className='font-semibold my-2'>WhatsApp: <span className="font-medium text-violet-500">+91 9384727902</span></li>
             <li className='font-semibold my-2'>Location : <span className='font-medium text-violet-500'>Chennai, India.</span></li>
           </ul>
@@ -60,16 +61,16 @@ function Footer() {
       <div className="flex justify-center items-center">
         <ul className='w-full flex flex-col lg:flex-row mx-auto justify-center items-start lg:items-center py-2'>
           <li  className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
-            <a href="#">terms and conditions</a>
+            <Link to={'/terms-and-conditions'}>terms and conditions</Link>
           </li>
           <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
-            <a href="#">privacy policy</a>
+            <Link to={'/privacy-policy'}>privacy policy</Link>
           </li>
           <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2 lg:border-r-2 lg:border-gray-700'>
-            <a href="#">return and refund policy</a>
+            <Link to={'/return-and-refund'}>return and refund policy</Link>
           </li>
           <li className='transition-colors text-md my-1 text-gray-400 hover:text-gray-100 capitalize px-2'>
-            <a href="#">shipping and delivery policy</a>
+            <Link to={'/shipping-and-delivery'}>shipping and delivery policy</Link>
           </li>
         </ul>
       </div>
